@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RMS Dashboard</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+body{
+  display:flex;
+  background:#f5f6fa;
+  min-height:100vh; 
+}
+.sidebar{
+  width:230px;
+  background:#1e2a2f;
+  color:white;
+  padding:20px;
+  overflow-y:auto;
+}
+.sidebar h2{
+  margin-bottom:20px;
+}
+
+.sidebar a{
+  display:block;
+  text-decoration:none;
+  color:white;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  background:#2ecc71;
+}
+.main{
+  flex:1;
+  padding:20px;
+}
+
+.header{
+  font-size:26px;
+  margin-bottom:20px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  font-size:14px;
+  color:gray;
+}
+.card p{
+  font-size:24px;
+  font-weight:bold;
+}
+.section{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:20px;
+}
+
+.box{
+  background:white;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+.list-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:10px 0;
+}
+a{
+  text-decoration: none;
+  color:black;
+  padding:5px 10px;
+}
+a:hover{
+  background:#2ecc71;
+  border:none;
+  padding:5px 10px;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+}
+.small{
+  font-size:12px;
+  color:gray;
+}
+@media(max-width:1000px){
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .section{
+    grid-template-columns:1fr;
+  }
+}
+iframe{
+  width:100%;
+  height:200px;
+  border:none;
+  border-radius:8px;
+  }
+</style>
+</head>
+<body>
+<div class="sidebar">
+  <h2>RMS</h2>
+  <a href="link.html">Dashboard</a><br>
+  <a href="link.html">New Request</a><br>
+  <a href="link.html">My Requests</a><br>
+  <a href="link.html">Approvals</a><br>
+  <a href="link.html">Departments</a><br>
+  <a href="link.html">Permissions</a><br>
+  <a href="link.html">Reports</a><br>
+  <a href="link.html">Audio Logs</a><br>
+  <a href="link.html">Admin Panel</a><br>
+  </div>
+  <div class="main">
+  <div class="header">Dashboard Overview</div>
+  <div class="cards">
+  <div class="card">
+      <h3>Total Requests</h3>
+      <p>124</p>
+      <div class="small">This Month</div>
+    </div>
+
+    <div class="card">
+      <h3>Pending</h3>
+      <p>18</p>
+      <div class="small">Awaiting Approval</div>
+    </div>
+
+    <div class="card">
+      <h3>Approved</h3>
+      <p>92</p>
+      <div class="small">Completed</div>
+    </div>
+
+    <div class="card">
+      <h3>Rejected</h3>
+      <p>14</p>
+      <div class="small">Needs Review</div>
+    </div>
+
+    <div class="card">
+      <h3>Active Users</h3>
+      <p>50</p>
+      <div class="small">Across Departments</div>
+    </div>
+  </div>
+  <div class="section">
+  <div class="box">
+      <h3>Request Status Trend</h3>
+      <iframe src="http://virtual-graph-paper.com/"></iframe>
+    </div>
+    <div class="box">
+      <h3>Top Categories</h3>
+      <div class="list-item"><span>Medical Support</span><span>32%</span></div>
+      <div class="list-item"><span>Legal Support</span><span>24%</span></div>
+      <div class="list-item"><span>Welfare</span><span>18%</span></div>
+      <div class="list-item"><span>Permissions</span><span>15%</span></div>
+      <div class="list-item"><span>Other</span><span>11%</span></div>
+  </div>
+  <div class="section">
+  <div class="box">
+      <h3>Pending Approvals</h3>
+      <div class="list-item">
+        <div>
+          Medical Support<br>
+          <span class="small">Medication approval</span>
+        </div>
+        <a href="link.html">Approve</a>
+      </div>
+      <div class="list-item">
+        <div>
+          Legal Support<br>
+          <span class="small">Case #7821</span>
+        </div>
+        <a href="link.html">Review</a>
+      </div>
+      <div class="list-item">
+        <div>
+          Welfare Service<br>
+          <span class="small">Family visit</span>
+        </div>
+        <a href="link.html">Review</a>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Recent Activity</h3>
+      <div class="small">Request #124 approved</div>
+      <div class="small">New request submitted</div>
+      <div class="small">Permission updated</div>
+      <div class="small">Request #123 closed</div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<hr>
+&copy; 2026 RMS Dashboard. All rights reserved.
+</body>
+</html>
